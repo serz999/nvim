@@ -1,36 +1,56 @@
-vim.g.netrw_banner = 0 -- Hide banner above files
-vim.g.netrw_liststyle = 3 -- Tree instead of plain view
-vim.g.netrw_browse_split = 3 -- Vertical split window when Enter pressed on file
-vim.g.termguicolors = true
+vim.g.netrw_banner = 0
 
-vim.opt.encoding = 'utf-8'
-vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 7
-vim.opt.spelllang = { 'en_us', 'ru' }
-vim.cmd('set noswapfile')
-vim.cmd('syntax on')
+vim.opt.scrolloff = 8
 
--- Indents
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.fileformat = 'unix'
-vim.cmd('filetype indent on')
+vim.opt.smartindent = true
 
--- OS and vim clipboard sync
-vim.cmd('set clipboard=unnamedplus')
+vim.opt.termguicolors = true
+
+vim.opt.wrap = false
+
+vim.opt.swapfile = false
+
+vim.opt.updatetime = 50
 
 -- Remaping
 vim.g.mapleader = ','
 vim.keymap.set('i' , 'jj', '<Esc>')
+
+-- NetrwTree
+-- TODO % - add new file
+-- TODO d - add new dir
+vim.keymap.set("n", "<leader>e", "<cmd>Ex<cr>")
+
+--  Move a line through the buffer
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n", "J", "mzJ`z")
 
+-- Hold cursor on place before commands
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Don't append to copy_buffer when p 
+vim.keymap.set("x", "p", "\"_dP")
+
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Buffers managment 
+vim.keymap.set ('n', 'q', '<cmd>bd<cr>')
+-- vim.keymap.set('n', 'H', ':BufferLineCyclePrev<CR>')
+-- vim.keymap.set('n', 'L', ':BufferLineCycleNext<CR>')
+
+-- hlsearch 
 vim.keymap.set('n', '<leader><space>', '<Cmd>nohlsearch<CR>')
 
 -- LazyVim clone & setup  
