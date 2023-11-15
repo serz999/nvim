@@ -24,14 +24,7 @@ vim.cmd('filetype indent on')
 -- OS and vim clipboard sync
 vim.cmd('set clipboard=unnamedplus')
 
--- Cursorlune coloring 
-vim.cmd([[
-    set cursorline
-	highlight clear CursorLine
-    highlight! CursorLineNR guibg=NONE ctermbg=NONE
-]])
-
---
+-- Remaping
 vim.g.mapleader = ','
 vim.keymap.set('i' , 'jj', '<Esc>')
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
