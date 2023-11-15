@@ -9,8 +9,11 @@ return {
         },
     },
     config = function()
-        require('telescope').load_extension('fzf')
-        local async = require("plenary.async")
+        local telescope = require('telescope')
+
+        telescope.setup({})
+
+        telescope.load_extension('fzf')
 
         vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
         vim.keymap.set('n', '<leader>g', '<cmd>Telescope live_grep<cr>')
