@@ -2,8 +2,8 @@ return {
     'nvim-lualine/lualine.nvim',
     opts = {
         options = {
-            icons_enabled = true,
-            theme = 'gruvbox',
+            icons_enabled = false,
+            theme = 'auto',
             component_separators = { left = '', right = ''},
             section_separators = { left = '', right = ''},
             disabled_filetypes = {
@@ -21,44 +21,24 @@ return {
           },
           sections = {
             lualine_a = {},
-            lualine_b = {},
-            lualine_c = {'diff', 'diagnostics'},
-            lualine_x = {'filetype'},
+            lualine_b = {'diagnostics'},
+            lualine_c = {'branch', 'diff'},
+            lualine_x = {},
             lualine_y = {'location', 'progress'},
             lualine_z = {}
           },
           inactive_sections = {
             lualine_a = {},
-            lualine_b = {},
-            lualine_c = {'diff', 'diagnostics'},
-            lualine_x = {'filetype', 'location', 'progress'},
-            lualine_y = {},
+            lualine_b = {'diagnostics'},
+            lualine_c = {'branch', 'diff'},
+            lualine_x = {},
+            lualine_y = {'location', 'progress'},
             lualine_z = {}
           },
           tabline = {},
           winbar = {},
           inactive_winbar = {},
-          extensions = {
-            {
-                sections = {
-                    lualine_a = {},
-                    lualine_b = {'branch'},
-                    lualine_c = {'diff', 'diagnostics'},
-                    lualine_x = {},
-                    lualine_y = {},
-                    lualine_z = {} 
-                },
-                inactive_sections = {
-                    lualine_a = {},
-                    lualine_b = {'branch'},
-                    lualine_c = {'diff', 'diagnostics'},
-                    lualine_x = {},
-                    lualine_y = {},
-                    lualine_z = {}
-                },
-                filetypes = {'NvimTree'}
-            }
-          },
+          extensions = {},
     },
 }
 
