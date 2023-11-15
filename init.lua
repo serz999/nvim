@@ -1,6 +1,6 @@
 vim.opt.guicursor = ""
 
-vim.g.netrw_banner = 0
+-- vim.g.netrw_banner = 0
 
 vim.opt.number = true
 vim.opt.relativenumber = true
