@@ -1,6 +1,5 @@
 require("set")
 require("remap")
-require("netrw-tree")
 
 -- LazyVim clone & setup  
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
