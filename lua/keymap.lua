@@ -13,13 +13,16 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Hold cursor on place when J
 vim.keymap.set("n", "J", "mzJ`z")
 
--- Don't add to clipboard when p 
+-- Don't add to nvim clipboard when p 
 vim.keymap.set("x", "p", "\"_dP")
 
--- TODO
--- vim.keymap.set("n", "<leader>y", "\"+y")
--- vim.keymap.set("v", "<leader>y", "\"+y")
--- vim.keymap.set("n", "<leader>Y", "\"+Y")
+-- System clipboard interaction
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("v", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>P", "\"+P")
 
 -- Buffers keymap 
 vim.keymap.set ('n', 'q', '<cmd>bd<cr>')
