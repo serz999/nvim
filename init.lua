@@ -1,5 +1,5 @@
 require("set")
-require("remap")
+require("keymap")
 
 -- LazyVim clone & setup  
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
